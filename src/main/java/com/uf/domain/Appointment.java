@@ -15,7 +15,7 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Date date;
+    private Date dateAppointement;
     private String location;
     private String description;
     private boolean confirmed;
@@ -32,12 +32,12 @@ public class Appointment {
         this.id = id;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDateAppointement() {
+        return dateAppointement;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateAppointement(Date dateAppointement) {
+        this.dateAppointement = dateAppointement;
     }
 
     public String getLocation() {
@@ -76,7 +76,7 @@ public class Appointment {
     public String toString() {
         return "Appointment{" +
                 "id=" + id +
-                ", date=" + date +
+                ", date=" + dateAppointement +
                 ", location='" + location + '\'' +
                 ", description='" + description + '\'' +
                 ", user=" + user +

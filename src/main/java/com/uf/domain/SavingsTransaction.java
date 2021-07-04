@@ -16,10 +16,10 @@ public class SavingsTransaction {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Date date;
+    private Date dateTransaction;
     private String description;
     private String type;
-    private String status;
+    private String statusTransaction;
     private double amount;
     private BigDecimal availableBalance;
 
@@ -29,11 +29,11 @@ public class SavingsTransaction {
 
     public SavingsTransaction() {}
 
-    public SavingsTransaction(Date date, String description, String type, String status, double amount, BigDecimal availableBalance, SavingsAccount savingsAccount) {
-        this.date = date;
+    public SavingsTransaction(Date dateTransaction, String description, String type, String statusTransaction, double amount, BigDecimal availableBalance, SavingsAccount savingsAccount) {
+        this.dateTransaction = dateTransaction;
         this.description = description;
         this.type = type;
-        this.status = status;
+        this.statusTransaction = statusTransaction;
         this.amount = amount;
         this.availableBalance = availableBalance;
         this.savingsAccount = savingsAccount;
@@ -47,12 +47,12 @@ public class SavingsTransaction {
         this.id = id;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDateTransaction() {
+        return dateTransaction;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateTransaction(Date date) {
+        this.dateTransaction = date;
     }
 
     public String getDescription() {
@@ -71,12 +71,12 @@ public class SavingsTransaction {
         this.type = type;
     }
 
-    public String getStatus() {
-        return status;
+    public String getStatusTransaction() {
+        return statusTransaction;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setStatusTransaction(String status) {
+        this.statusTransaction = status;
     }
 
     public double getAmount() {

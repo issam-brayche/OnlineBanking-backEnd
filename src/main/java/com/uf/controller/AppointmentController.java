@@ -40,7 +40,7 @@ public class AppointmentController {
 	public String createAppointmentPost(@ModelAttribute("appointment") Appointment appointment, @ModelAttribute("dateString") String date, Model model, Principal principal) throws ParseException {
 		SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd hh:mm");
 		Date d1 = format1.parse(date);
-		appointment.setDate(d1);
+		appointment.setDateAppointement(d1);
 		Users user = userService.findByUsername(principal.getName());
 		appointment.setUser(user);
 		appointmentService.createAppointment(appointment);
